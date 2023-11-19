@@ -75,6 +75,7 @@ class CalculatorTest {
         Assertions.assertEquals(result, expectedResult);
     }
 
+    @Test
     void multiply_TwoNegativeIntegers_MultiplyCorrectly(){
         //Arrange
         int a = -11;
@@ -88,6 +89,7 @@ class CalculatorTest {
         Assertions.assertEquals(result, expectedResult);
     }
 
+    @Test
     void multiply_OneParameterIsZero_MultiplyCorrectly(){
         //Arrange
         int a = 1;
@@ -100,5 +102,6 @@ class CalculatorTest {
         //Assert
         Assertions.assertEquals(result, expectedResult);
     }
+
 
 }
