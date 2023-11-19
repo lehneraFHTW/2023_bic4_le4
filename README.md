@@ -41,7 +41,6 @@ git branch -m main
 ### 3.1 Upstream Reposity einstellen
 ``` SHELL
 git remote add origin UrlZumGitubRepository.git
-
 git push -u -f origin main
 ```
 
@@ -56,7 +55,7 @@ git checkout -b feature/XY
 git add .
 git commit -m "CommitMessage"
 ```
-Siehe [Tipps fuer commit Messages](https://cbea.ms/git-commit/)
+Siehe [Tipps fuer commit messages](https://cbea.ms/git-commit/)
 
 3.2.3  Den Featurebranch auf github pushen
 ``` SHELL
