@@ -6,4 +6,8 @@ public class Calculator {
         return firstAddend + secondAddend;
     }
 
+    public long multiply(int firstFactor, int secondFactor){
+        return firstFactor * secondFactor;
+    }
+
 }

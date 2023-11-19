@@ -61,4 +61,44 @@ class CalculatorTest {
 
     }
 
+    @Test
+    void multiply_TwoPositiveIntegers_MultiplyCorrectly(){
+        //Arrange
+        int a = 4;
+        int b = 7;
+        long expectedResult = 28;
+
+        //Act
+        long result = calc.multiply(a,b);
+
+        //Assert
+        Assertions.assertEquals(result, expectedResult);
+    }
+
+    void multiply_TwoNegativeIntegers_MultiplyCorrectly(){
+        //Arrange
+        int a = -11;
+        int b = -11;
+        long expectedResult = 121;
+
+        //Act
+        long result = calc.multiply(a,b);
+
+        //Assert
+        Assertions.assertEquals(result, expectedResult);
+    }
+
+    void multiply_OneParameterIsZero_MultiplyCorrectly(){
+        //Arrange
+        int a = 1;
+        int b = 0;
+        long expectedResult = 0;
+
+        //Act
+        long result = calc.multiply(a,b);
+
+        //Assert
+        Assertions.assertEquals(result, expectedResult);
+    }
+
 }
