@@ -103,5 +103,74 @@ class CalculatorTest {
         Assertions.assertEquals(result, expectedResult);
     }
 
+    @Test
+    void divide_TwoPositiveIntegers_DivideCorrectly(){
+        //Arrange
+        int a = 28;
+        int b = 7;
+        float expectedResult = 4;
+
+        //Act
+        float result = calc.divide(a,b);
+
+        //Assert
+        Assertions.assertEquals(result, expectedResult);
+    }
+
+    @Test
+    void divide_TwoNegativeIntegers_DivideCorrectly(){
+        //Arrange
+        int a = -11;
+        int b = -11;
+        float expectedResult = 1;
+
+        //Act
+        float result = calc.divide(a,b);
+
+        //Assert
+        Assertions.assertEquals(result, expectedResult);
+    }
+
+    @Test
+    void divide_ByZero_ThrowsInvalidArgumentException(){
+        //Arrange
+        int a = 1;
+        int b = 0;
+
+        //Act
+        Throwable thrown = assertThrows(IllegalArgumentException.class, ()-> calc.divide(a, b));
+
+        //Assert
+        Assertions.assertEquals("Division by Zero is forbidden", thrown.getMessage());
+    }
+    @Test
+    void divide_OnePositiveOneNegativeInteger_DivideCorrectly(){
+        //Arrange
+        int a = -4;
+        int b = 2;
+        float expectedResult = -2;
+
+        //Act
+        float result = calc.divide(a,b);
+
+        //Assert
+        Assertions.assertEquals(result, expectedResult);
+    }
+
+    @Test
+    void divide_TwoIntegersThatResultFloat_DivideCorrectly(){
+        //Arrange
+        int a = 3;
+        int b = 2;
+        float expectedResult = 1.5f;
+
+        //Act
+        float result = calc.divide(a,b);
+
+        //Assert
+        Assertions.assertEquals(result, expectedResult);
+    }
+
+
 
 }
