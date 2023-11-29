@@ -29,3 +29,12 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file Calculator/pom.xml
+
+    - name: Copy to staging
+      run: mkdir staging && cp Calculator/target/*.jar staging
+        
+    - name: upload
+      uses: actions/upload-artifact@v3
+      with:
+        name: Bic3_Calculator.jar
+        path: staging
